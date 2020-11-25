@@ -3,7 +3,7 @@ int f(int x)
 {
 	if (x<5)
 	{
-		std::cout << "is less than 5 \n";
+		std::cout << "is Less than 5 \n";
 	}
 	else
 	{
