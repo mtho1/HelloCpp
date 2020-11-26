@@ -28,8 +28,16 @@ struct ExampleTestsA : public ::testing::Test   //test fixture
 
 }; */
 
+TEST(ExampleTestsA, DemonstrateTests1) {
+	EXPECT_TRUE(true);
+	EXPECT_EQ(square(5),26);
+	
+}
+
 TEST(ExampleTestsB, DemonstrateTests2) {
 	EXPECT_TRUE(true);
+	EXPECT_EQ(square(5),25);
+	
 }
 
 
