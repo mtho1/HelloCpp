@@ -12,13 +12,20 @@ SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS
 
 
 #set(gtest_force_shared_crt ON)
-#enable_testing()
+enable_testing()
 
-#add_subdirectory(googletest)
-#set(Headers Example.hpp)
-set(Sources hello.cpp)
-add_executable(MyHello ${Sources}) 
-#add_library(${This} STATIC ${Sources} ${Headers})
-#add_subdirectory(test)
+add_subdirectory(googletest)
+add_subdirectory(test)
+set(Headers src/mike_math.hpp)
+set(Sources src/hello.cpp)
+set(Sources2 src/mike_math.cpp)
+
+add_library(MyLib STATIC ${Sources2} ${Headers})
+
+add_executable(MyHello ${Sources} ${Headers}) 
+target_link_libraries(MyHello MyLib)
+
+
+
 
 
